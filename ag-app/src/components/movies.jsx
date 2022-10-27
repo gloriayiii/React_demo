@@ -53,7 +53,7 @@ class Movies extends Component {
           <Link
             to="/movies/new"
             className="btn btn-primary"
-            style={{ marginBottom: 20 }}
+            style={{ marginBottom: 20, marginTop: 20}}
           >
             New Movie
           </Link>
