@@ -9,7 +9,7 @@ class MovieForm extends Form {
       title: "",
       genreId: "",
       numberInStock: "",
-      dailyRentalRate: ""
+      dailyPlaybackRate: ""
     },
     genres: [],
     errors: {},
@@ -29,7 +29,7 @@ class MovieForm extends Form {
       _id: movie._id,
       title: movie.title,
       numberInStock: movie.numberInStock,
-      dailyRentalRate: movie.dailyRentalRate
+      dailyPlaybackRate: movie.dailyPlaybackRate
     };
   }
 
@@ -49,7 +49,7 @@ class MovieForm extends Form {
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("title", "Title", "text", "Please enter the name of movie")}
           {this.renderInput("numberInStock", "Number in Stock", "number","Please enter a number")}
-          {this.renderInput("dailyRentalRate", "Rate", "number", "Please enter a number")}
+          {this.renderInput("dailyPlaybackRate", "Rate", "number", "Please enter a number")}
           {this.renderButton("Save")}
           </form>
         </div>

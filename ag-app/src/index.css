@@ -11,3 +11,11 @@ body {
 .clickable {
   cursor: pointer;
 }
+
+.centerText{
+  text-align: center;
+}
+
+.my-card{
+  background-color: pink;
+}

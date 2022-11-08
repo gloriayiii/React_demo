@@ -4,6 +4,7 @@ import { getMovies } from "../services/movieData";
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
+import '../index.css';
 
 class Movies extends Component {
   constructor(props) {
@@ -35,7 +36,7 @@ class Movies extends Component {
   columndata = [
       { field: 'title',filter: true, editable: true },
       { field: 'numberInStock', sortable: true, filter: true, editable: true },
-      { field: 'dailyRentalRate', sortable: true, filter: true, editable: true },
+      { field: 'dailyPlaybackRate', sortable: true, filter: true, editable: true },
   ];
 
   onRemoveSelected = () => {
@@ -47,20 +48,20 @@ class Movies extends Component {
   
   render() {
     return (
-      <div className="row">
-
-        <div className="col" style={{ height: 1000, width: '100%' }} >
+      <div className="my-card">
+        <div className="col" style={{ height: 1180, width: '100%' }} >
           <Link
             to="/movies/new"
             className="btn btn-primary"
-            style={{ marginBottom: 20, marginTop: 20}}
+            style={{ marginBottom: 20, marginTop:20 }}
           >
             New Movie
-          </Link>
+          </Link>          
           <div className="ag-theme-alpine" style={{ height: 1000, width: '100%' }}>
-            <button class="btn btn-danger" onClick={() => this.onRemoveSelected()}>
+            <button class="btn btn-danger" style={{ marginBottom: 20 }} onClick={() => this.onRemoveSelected()}>
               Remove Selected
             </button>
+
             <AgGridReact
               // ref={gridRef}
               rowData={this.state.movies}
